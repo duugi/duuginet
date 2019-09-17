@@ -1,0 +1,83 @@
+.navbar-blue {
+  color: rgb(222, 235, 255);
+  background-color: rgb(7, 71, 166);
+	border-color: #e3ebf6;
+}
+
+.navbar-blue .navbar-heading {
+	color: #95aac9
+}
+
+.navbar-blue .navbar-divider {
+	border-color: rgba(255, 235, 255, 0.4);
+}
+
+.navbar-blue .navbar-user {
+	border-top-color: #e3ebf6
+}
+
+.navbar-blue .navbar-user-link {
+	color: #6e84a3
+}
+
+.navbar-blue .navbar-user-link:focus,
+.navbar-blue .navbar-user-link:hover {
+	color: #12263f
+}
+
+.navbar-blue .navbar-brand {
+	filter: none
+}
+
+.navbar-blue .navbar-collapse:before {
+	border-top-color: #e3ebf6
+}
+
+/* line 194, /home/duugi_b/.rvm/gems/ruby-2.5.1/gems/bootstrap-4.3.1/assets/stylesheets/bootstrap/_navbar.scss */
+.navbar-blue .navbar-brand {
+  color: rgba(0, 0, 0, 0.9);
+}
+/* line 17, /home/duugi_b/.rvm/gems/ruby-2.5.1/gems/bootstrap-4.3.1/assets/stylesheets/bootstrap/mixins/_hover.scss */
+.navbar-blue .navbar-brand:hover, .navbar-blue .navbar-brand:focus {
+  color: rgba(0, 0, 0, 0.9);
+}
+/* line 203, /home/duugi_b/.rvm/gems/ruby-2.5.1/gems/bootstrap-4.3.1/assets/stylesheets/bootstrap/_navbar.scss */
+.navbar-blue .navbar-nav .nav-link {
+  color: rgba(255, 255, 255, 0.6);
+}
+/* line 17, /home/duugi_b/.rvm/gems/ruby-2.5.1/gems/bootstrap-4.3.1/assets/stylesheets/bootstrap/mixins/_hover.scss */
+.navbar-blue .navbar-nav .nav-link:hover, .navbar-blue .navbar-nav .nav-link:focus {
+  color: rgba(255, 255, 255, 1);
+}
+/* line 210, /home/duugi_b/.rvm/gems/ruby-2.5.1/gems/bootstrap-4.3.1/assets/stylesheets/bootstrap/_navbar.scss */
+.navbar-blue .navbar-nav .nav-link.disabled {
+  color: rgba(0, 0, 0, 0.3);
+}
+/* line 215, /home/duugi_b/.rvm/gems/ruby-2.5.1/gems/bootstrap-4.3.1/assets/stylesheets/bootstrap/_navbar.scss */
+.navbar-blue .navbar-nav .show > .nav-link,
+.navbar-blue .navbar-nav .active > .nav-link,
+.navbar-blue .navbar-nav .nav-link.show,
+.navbar-blue .navbar-nav .nav-link.active {
+  color: rgba(0, 0, 0, 0.9);
+}
+/* line 223, /home/duugi_b/.rvm/gems/ruby-2.5.1/gems/bootstrap-4.3.1/assets/stylesheets/bootstrap/_navbar.scss */
+.navbar-blue .navbar-toggler {
+  color: rgba(0, 0, 0, 0.5);
+  border-color: rgba(0, 0, 0, 0.1);
+}
+/* line 228, /home/duugi_b/.rvm/gems/ruby-2.5.1/gems/bootstrap-4.3.1/assets/stylesheets/bootstrap/_navbar.scss */
+.navbar-blue .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+/* line 232, /home/duugi_b/.rvm/gems/ruby-2.5.1/gems/bootstrap-4.3.1/assets/stylesheets/bootstrap/_navbar.scss */
+.navbar-blue .navbar-text {
+  color: rgba(0, 0, 0, 0.5);
+}
+/* line 234, /home/duugi_b/.rvm/gems/ruby-2.5.1/gems/bootstrap-4.3.1/assets/stylesheets/bootstrap/_navbar.scss */
+.navbar-blue .navbar-text a {
+  color: rgba(0, 0, 0, 0.9);
+}
+/* line 17, /home/duugi_b/.rvm/gems/ruby-2.5.1/gems/bootstrap-4.3.1/assets/stylesheets/bootstrap/mixins/_hover.scss */
+.navbar-blue .navbar-text a:hover, .navbar-blue .navbar-text a:focus {
+  color: rgba(0, 0, 0, 0.9);
+}

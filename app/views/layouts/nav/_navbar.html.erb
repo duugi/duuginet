@@ -1,0 +1,34 @@
+<%
+@width_nav = "64px"
+
+unless @admin_nav.nil?
+
+	@width_nav = "304px"
+end
+%>
+
+<div class="" style="width: <%= @width_nav %>;">
+	<div class="navbar-container">
+		<div class="navbar-main">
+			<div class="navbar navbar-expand-lg sticky-top blue-nav" style="">
+			    <a class="navbar-brand" href="/">
+			    <%= image_tag "logo.svg", :class => "img_preview", :width => "24", :height => "24" %>
+			    </a>
+			    <div class="collapse navbar-collapse flex-column text-white" id="navbar-collapse">
+			    	<div class="nav flex-column nav-pills">
+	                    <a class="nav-link"  id="menuEl" href="#drawerEl"><i class="icon-search4"></i></a>
+	                    <a class="nav-link" id="menuE2" href="#drawerE1"><i class="icon-add"></i></a>
+	                    <a class="nav-link blink skin_handle" href="#"><i class="icon-lightbulb_outline"></i></a>
+	                    <a class="nav-link" id="menuE3" href="#drawerE1"><i class="icon-users"></i></a>
+	                    <a class="nav-link" id="v-pills-settings-tab" href="#"><i class="icon-settings"></i></a>
+	                </div>
+			    </div>
+			    <div class="d-none d-lg-block">
+			    </div>
+			</div>
+		</div>
+		<% unless @admin_nav.nil? -%>
+			<%= render "layouts/nav/pages" %>
+		<% end %>
+	</div>
+</div>

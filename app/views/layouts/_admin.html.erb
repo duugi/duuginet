@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Master</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <%= yield :javascript_includes %>
+
+    <script>
+      saas.language = "<%= I18n.locale %>";
+      window.controller = "<%= controller.controller_name %>";
+    </script>
+
+  </head>
+
+  <body class="<%= @body_class %>">
+    <div class="layout layout-nav-side">
+
+      <div class="navigation">
+          <%= render "layouts/nav/navbar" %>
+      </div>
+
+      <div class="wrapper ">
+          <% if flash.any? %>
+          <header id="aui-message-bar">
+              <%= render "layouts/alerts" %>
+          </header>
+          <% end %>
+          <div class="main-content">
+
+              <%= yield %>
+          </div>
+      </div>
+
+    </div>
+
+  </body>
+</html>

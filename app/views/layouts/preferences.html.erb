@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Settings</title>
+    <%= render "layouts/partials/header" %>
+  </head>
+
+  <body style="background-color: #f9fbfd;">
+    <div class="layout layout-nav-side">
+
+      <%= render "layouts/partials/navbarSettings" %>
+
+
+      <div class="main-content ">
+        <div class="container-fluid">
+          <div class="row justify-content-center">
+            <div class="col-12 col-lg-10 col-xl-8">
+
+              <header id="aui-message-bar">
+                  <%= render "layouts/alerts" %>
+              </header>
+
+              <div class="">
+                <%= yield %>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <%= render "layouts/partials/footer" %>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+
+<p id="notice"><%= notice %></p>
+
+
+<h1>Post Comments</h1>
+
+<%= content_tag :table, role: :datatable, data: { url: post_comments_path(format: :json)} do %>
+  <thead>
+    <tr>
+      <th width="400">Comment</th>
+      <th width="102">Post name</th>
+      <th width="102"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+  </tbody>
+<% end %>
+
+<br>
+
+
+
+<%= link_to 'New Post Comment', new_post_comment_path %>

@@ -1,0 +1,25 @@
+.panel {
+	.panel-heading {
+		.general-page-header {
+		    font-size: 12px;
+		    display: -webkit-box;
+		    display: -ms-flexbox;
+		    display: flex;
+		    -webkit-box-align: center;
+		    -ms-flex-align: center;
+		    align-items: center;
+		    padding: 8px;
+		    font-weight: 500;
+		    background-color: #F7F9FA;
+		    color: #637282;
+		}
+	}
+	.panel-body {
+	    position: relative;
+	    padding: 20px 0;
+	}
+}
+
+body .form-group select.required-empty, body .form-group input.required-empty, body .form-group textarea.required-empty, body .form-group div.required-empty {
+    background-color: #ffffd7;
+}

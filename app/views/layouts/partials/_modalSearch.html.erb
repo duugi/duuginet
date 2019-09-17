@@ -1,0 +1,63 @@
+<!-- Modal: Search -->
+<div class="modal fade" id="sidebarModalSearch" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-vertical " role="document">
+
+        <div class="modal-content">
+            <div class="search-box">
+              <div class="search-model-left">
+                <div class="container-fluit">
+                  <a class="navbar-brand" href="/">
+                    <%= image_tag "logo.svg", :class => "" %>
+                  </a>
+
+                  <div class="mb-4">
+                    <button type="button" class="btn btn-rounded-circle btn-white" data-dismiss="modal"><span class="fe fe-arrow-left"></span></button>
+                  </div>
+                </div>
+              </div>
+              <div class="search-model-right">
+                <div class="modal-body" style="padding-top:65px;">
+
+                    <!-- Form -->
+                    <form class="mb-6">
+                      <div class="input-group input-group-merge input-group-rounded">
+                        <input id="searchInput" type="search" class="form-control form-control-prepended search" placeholder="Search">
+                        <div class="input-group-prepend">
+                          <div class="input-group-text">
+                            <span class="fe fe-search"></span>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+
+                    <!-- List group -->
+<div class="my-n3">
+                      <div class="list-group list-group-flush list">
+                        <span id="resultRow" style="font-weight:bold;" >On input area you can scroll down and up with your mouse wheel</span>
+                      </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+
+  </div>
+</div>
+
+<script>
+  // using on
+
+
+  $( document ).ready(function() {
+    console.log( "ready!" );
+    var currentRow = 0;
+    $("#searchInput").on('mousewheel', function(event) {
+        currentRow += event.deltaY;
+        $("#resultRow").html(currentRow);
+    });
+
+  });
+
+
+
+</script>
