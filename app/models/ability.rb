@@ -5,8 +5,8 @@ class Ability
 
   def initialize(user)
 
-    can :new, Post
-    can :read, Post, public: true
+    can :create, Post
+    #can :read, Post, public: true
 
     if user.present?  # additional permissions for logged in users (they can read their own posts)
 
@@ -19,14 +19,47 @@ class Ability
         #can :update, Post, user_id: user.id
         #can :destroy, Post, user_id: user.id
 
-        can [:update, :destroy, :edit, :read], Post do |post|
-          post.user_id == user.id
+        bool_user = false
+        bool_location = false
+        class_name = ""
+        count = 0
+
+        user.role.permissions.each do |permission|
+
+          tmp_class_name = permission.subject_class
+
+          if class_name != tmp_class_name
+            class_name = tmp_class_name
+            bool_user = false
+            bool_location = false
+          else
+          end
+
+          if permission.action == "user"
+            bool_user = true
+          end
+
+          if permission.action == "location"
+            bool_location = true
+          end
+
+          if ['read', 'edit', 'update', 'destroy'].include? permission.action
+            if bool_user
+              can permission.action.to_sym, permission.subject_class.constantize, user_id: user.id
+            else
+              can permission.action.to_sym, permission.subject_class.constantize
+            end
+
+          end
+          #puts permission.to_json
         end
+
+        #can [:update, :destroy, :edit, :read], Post do |post|
+        #  post.user_id == user.id
+        #end
 
         #can :read, :all
       end
-
-
 
       #if user.admin?  # additional permissions for administrators
       #  can :read, Post

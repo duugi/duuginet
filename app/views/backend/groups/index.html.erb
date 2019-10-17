@@ -1,0 +1,67 @@
+<div class="row d-flex">
+
+    <main class="flex-grow-1">
+
+        <p id="notice"><%= notice %></p>
+
+        <h1>Groups</h1>
+
+        <div class="content">
+            <table class="table table-sm">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Description</th>
+                  <th>Is active</th>
+                  <th>Is public</th>
+                  <th colspan="3"></th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <% @backend_groups.each do |backend_group| %>
+                  <tr>
+                    <td><%= backend_group.name %></td>
+                    <td><%= backend_group.description %></td>
+                    <td><%= backend_group.is_active %></td>
+                    <td><%= backend_group.is_public %></td>
+                    <td><%= link_to 'Show', backend_group %></td>
+                    <td><%= link_to 'Edit', edit_backend_group_path(backend_group), {:remote => true, 'data-toggle' =>  "modal", 'data-target' => '#modal-window', class: ''} %></td>
+                    <td><%= link_to 'Destroy', backend_group, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                  </tr>
+                <% end %>
+              </tbody>
+            </table>
+
+        </div>
+    </main>
+
+    <div class="sidebar bg-transparent">
+      <div class="sidebar-sticky">
+        <div class="grid-search-body">
+
+          <%= link_to 'New Group', new_backend_group_path, {:remote => true, 'data-toggle' =>  "modal", 'data-target' => '#modal-window', class: 'btn btn-block btn-primary btn-sm'} %>
+
+            <% #= link_to 'New Group', new_backend_group_path, class: "btn btn-block btn-primary btn-sm", data: { modal: true } %>
+
+
+            <br />
+            <ul class="secondary-action-menu">
+                <li class="mc-tertiary-list-element">
+                    <a href="#" class="link"><i class="fe fe-download-cloud"></i> Import</a>
+                </li>
+                <li class="mc-tertiary-list-element">
+                    <a href="#" class="link"><i class="fe fe-folder"></i> Export</a>
+                </li>
+                <li class="mc-tertiary-list-element">
+                    <a href="#" class="link"><i class="fe fe-watch"></i> Add permissions</a>
+                </li>
+                <li class="mc-tertiary-list-element">
+                    <a href="#" class="link"><i class="fe fe-trash"></i> Show deleted data</a>
+                </li>
+            </ul>
+
+        </div>
+      </div>
+    </div>
+  </div>

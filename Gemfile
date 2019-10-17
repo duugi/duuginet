@@ -19,7 +19,14 @@ gem 'kaminari'
 #end datatables
 #QRCode
 gem 'rqrcode'
-
+#Settings via cache
+gem "rails-settings-cached", "~> 2.0"
+#Elastic search
+gem 'searchkick'
+#images
+gem "paperclip"
+#HAML
+gem "haml-rails", "~> 2.0"
 #end duugi
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

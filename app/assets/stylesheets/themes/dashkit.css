@@ -974,9 +974,10 @@
 }
 
 .modal-dialog-vertical {
-	height: 100%;
-	max-width: 600px;
-	margin: 0
+}
+
+.size-lg {
+	max-width: 600px!important;
 }
 
 .modal-dialog-vertical .modal-content {
@@ -1326,7 +1327,7 @@
 }
 
 .navbar-light {
-	background-color: #fff;
+	background-color: #F7F9FA;
 	border-color: #e3ebf6
 }
 
@@ -1414,7 +1415,7 @@
 }
 
 .navbar-nav .dropdown-menu {
-	border: none
+	border: 1px solid rgba(18,38,63,.1);
 }
 
 .navbar-nav .dropdown-menu .dropdown-menu {
@@ -1864,6 +1865,10 @@
 	transform: translateX(-50%)
 }
 
+.navbar-blue .navbar-divider {
+	border-color: #0747a6;
+}
+
 @media (min-width:576px) {
 	.navbar-vertical.navbar-expand-sm {
 		display: block;
@@ -2046,7 +2051,7 @@
 		margin-right: -1.5rem;
 		padding: 1.5rem 1.5rem .75rem;
 		border-top-width: 1px;
-		border-top-style: solid
+		border-top-style: none
 	}
 	.navbar-vertical.navbar-expand-md .navbar-user .dropup .dropdown-menu {
 		left: 50%;
@@ -2662,30 +2667,6 @@ button:focus {
 	outline: none!important
 }
 
-@font-face {
-	font-family: Cerebri Sans;
-	src: url(../fonts/cerebrisans/cerebrisans-regular.eot);
-	src: url(../fonts/cerebrisans/cerebrisans-regular.eot?#iefix) format("embedded-opentype"), url(../fonts/cerebrisans/cerebrisans-regular.woff) format("woff"), url(../fonts/cerebrisans/cerebrisans-regular.ttf) format("truetype");
-	font-weight: 400;
-	font-style: normal
-}
-
-@font-face {
-	font-family: Cerebri Sans;
-	src: url(../fonts/cerebrisans/cerebrisans-medium.eot);
-	src: url(../fonts/cerebrisans/cerebrisans-medium.eot?#iefix) format("embedded-opentype"), url(../fonts/cerebrisans/cerebrisans-medium.woff) format("woff"), url(../fonts/cerebrisans/cerebrisans-medium.ttf) format("truetype");
-	font-weight: 500;
-	font-style: normal
-}
-
-@font-face {
-	font-family: Cerebri Sans;
-	src: url(../fonts/cerebrisans/cerebrisans-semibold.eot);
-	src: url(../fonts/cerebrisans/cerebrisans-semibold.eot?#iefix) format("embedded-opentype"), url(../fonts/cerebrisans/cerebrisans-semibold.woff) format("woff"), url(../fonts/cerebrisans/cerebrisans-semibold.ttf) format("truetype");
-	font-weight: 600;
-	font-style: normal
-}
-
 .bg-fixed-bottom {
 	background-repeat: no-repeat;
 	background-position: 100% 100%;
@@ -2997,6 +2978,12 @@ button:focus {
 	font-size: 1.70833rem
 }
 
+.avatar-xxxl {
+	width: 14rem;
+	height: 14rem;
+	font-size: 1.70833rem
+}
+
 @media (min-width:768px) {
 	.avatar-xxl {
 		width: 8rem;
@@ -3027,6 +3014,10 @@ button:focus {
 
 .avatar-xxl.avatar-4by3 {
 	width: 10.66667rem
+}
+
+.avatar-xxxl.avatar-4by3 {
+	width: 16rem
 }
 
 .avatar-group {

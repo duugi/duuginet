@@ -1,4 +1,4 @@
-class PostCommentsController < ApplicationController
+class PostCommentsController < Backend::PreferenceController
   before_action :set_post_comment, only: [:show, :edit, :update, :destroy]
 
   # GET /post_comments

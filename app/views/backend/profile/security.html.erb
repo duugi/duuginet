@@ -1,0 +1,10 @@
+<ul>
+<%
+
+User.all.each do |user| %>
+  <li>
+    <%= user.profile.firstname %>
+    (<%= user.email %>)  ago
+  </li>
+<% end %>
+</ul>

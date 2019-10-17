@@ -1,0 +1,2 @@
+module Hrms::DepartmentsHelper
+end

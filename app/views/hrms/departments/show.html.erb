@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @hrms_department.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @hrms_department.description %>
+</p>
+
+<p>
+  <strong>Leave allow count:</strong>
+  <%= @hrms_department.leave_allow_count %>
+</p>
+
+<p>
+  <strong>Max ppl absent:</strong>
+  <%= @hrms_department.max_ppl_absent %>
+</p>
+
+<p>
+  <strong>Max absent length:</strong>
+  <%= @hrms_department.max_absent_length %>
+</p>
+
+<%= link_to 'Edit', edit_hrms_department_path(@hrms_department) %> |
+<%= link_to 'Back', hrms_departments_path %>

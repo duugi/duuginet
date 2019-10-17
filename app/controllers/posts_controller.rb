@@ -6,13 +6,7 @@ class PostsController < AdminController
   # GET /posts
   # GET /posts.json
   def index
-
     @posts = Post.all
-
-    @tables = ActiveRecord::Base.connection.tables
-
-    @tables.delete("schema_migrations")
-    @tables.delete("ar_internal_metadata")
   end
 
   # GET /posts/1

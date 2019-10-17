@@ -1,6 +1,6 @@
 <!-- Modal: Search -->
 <div class="modal fade" id="sidebarModalSearch" tabindex="-1" role="dialog" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-vertical " role="document">
+  <div class="modal-dialog modal-dialog-vertical size-lg" role="document">
 
         <div class="modal-content">
             <div class="search-box">
@@ -43,21 +43,3 @@
 
   </div>
 </div>
-
-<script>
-  // using on
-
-
-  $( document ).ready(function() {
-    console.log( "ready!" );
-    var currentRow = 0;
-    $("#searchInput").on('mousewheel', function(event) {
-        currentRow += event.deltaY;
-        $("#resultRow").html(currentRow);
-    });
-
-  });
-
-
-
-</script>

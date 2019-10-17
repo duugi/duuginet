@@ -81,3 +81,210 @@
 .navbar-blue .navbar-text a:hover, .navbar-blue .navbar-text a:focus {
   color: rgba(0, 0, 0, 0.9);
 }
+
+.atl-navbar {
+  display: block;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  max-width: 240px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  overflow-y: auto;
+  font-size: 14px;
+  border-width: 0;
+    border-style: none;
+}
+
+.atl-navbar .atl-navbar-nav {
+  display: flex;
+  flex-direction: column;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+.atl-nav-link {
+  padding: 8px 12px 7px;
+
+  -webkit-box-align: center;
+    align-items: center;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: flex;
+    background-color: transparent;
+    color: rgb(66, 82, 110);
+    fill: transparent;
+    height: 40px;
+    border-radius: 0px;
+    flex: 0 0 auto;
+    text-decoration: none;
+}
+
+a.atl-nav-link:hover, a.atl-nav-link.active {
+      background-color: rgba(9, 30, 66, 0.04);
+      color: rgb(0, 82, 204);
+      fill: rgba(9, 30, 66, 0.04);
+      padding: 8px 12px 7px;
+}
+
+.atl-navbar-nav .atl-nav-link>.fe {
+    display: inline-block;
+    min-width: 1.75rem;
+    padding-bottom: .125em;
+    font-size: 1.0625rem;
+    line-height: 1.40625rem;
+}
+
+.krwbFu {
+    flex-basis: auto;
+    flex-shrink: 0;
+    overflow: hidden;
+    padding: 0px 16px;
+    transition: flex-basis 220ms ease 0s, padding 220ms ease 0s;
+}
+
+.hGzWqW {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    height: 40px;
+    font-size: 18px;
+    line-height: 18px;
+    letter-spacing: -0.02em;
+}
+
+.krwbFu > :first-child {
+    margin-bottom: 8px;
+}
+
+
+.bcqjRO {
+    cursor: ew-resize;
+    height: 100%;
+    right: -16px;
+    width: 16px;
+}
+
+.bcqjRO::before {
+    content: "";
+    height: 100%;
+    left: -1px;
+    position: absolute;
+    width: 2px;
+    transition: background-color 300ms ease-in-out 200ms;
+}
+
+.ifKiUI {
+    position: relative;
+    top: calc(50% - 18px);
+    height: 36px;
+    color: transparent;
+    width: 24px;
+    left: -1px;
+    cursor: pointer;
+    background: none;
+    border-width: initial;
+    border-style: none;
+    border-color: initial;
+    border-image: initial;
+}
+
+.ifKiUI::before {
+    top: 10px;
+    transform-origin: 1px 7px;
+}
+
+.ifKiUI::after {
+    top: 16px;
+    transform-origin: 1px 1px;
+}
+
+.ifKiUI::before, .ifKiUI::after {
+    content: "";
+    background-color: rgb(76, 154, 255);
+    width: 2px;
+    height: 8px;
+    position: absolute;
+    left: 8px;
+    opacity: 0;
+    transform: rotate(0deg);
+    border-radius: 16px;
+    transition: transform 200ms ease-in-out 0s, opacity 300ms ease-in-out 200ms;
+}
+/*APP*/
+.product_list {
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    margin: 0px -24px 16px;
+}
+
+.product_item {
+    cursor: pointer;
+    display: block;
+    width: 120px;
+    color: rgb(80, 95, 121);
+    text-align: center;
+    margin: 8px 16px 0px;
+}
+
+.product_item:hover {
+    .icon-holder {
+      box-shadow: rgba(9, 30, 66, 0.3) 4px 4px 8px -2px, rgba(9, 30, 66, 0.3) 0px 0px 1px;
+    }
+    .icon-round {
+
+    }
+    color: rgb(0, 101, 255);
+    text-decoration: none;
+}
+
+.icon-holder {
+    box-sizing: border-box;
+    height: 96px;
+    width: 96px;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.31) 0px 0px 1px;
+    border-radius: 16px;
+    margin: 0px auto 16px;
+    padding: 24px;
+    transition: box-shadow 0.25s ease 0s;
+    background-color: #fff;
+}
+
+.round-icon {
+  color: rgb(38, 132, 255);
+    display: inline-block;
+    fill: rgb(37, 56, 88);
+    height: 48px;
+    position: relative;
+    user-select: none;
+    font-size: 40px;
+}
+
+.title-app {
+    font-weight: 600;
+    font-size: 12px;
+    color: rgb(23, 43, 77);
+}
+
+.desc-app {
+    color: rgb(122, 134, 154);
+    font-size: 12px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+
+.hover-shadow-sm:hover {
+  box-shadow: 0 0.125rem 0.25rem rgba(31, 45, 61, 0.08) !important; }
+
+.hover-shadow:hover {
+  box-shadow: 0 0 1.25rem rgba(31, 45, 61, 0.08) !important; }
+
+.hover-shadow-lg:hover {
+  box-shadow: 0 1rem 3rem rgba(31, 45, 61, 0.125) !important;
+}

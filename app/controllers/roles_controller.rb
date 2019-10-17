@@ -1,5 +1,5 @@
 class RolesController < Backend::PreferenceController
-  before_action :set_role, only: [:show, :edit, :update, :destroy]
+  before_action :set_role, only: [:show, :edit, :update, :destroy, :post_permission]
 
   #caches_action :archive, expires_in: 1.day
   #caches_action :index, unless: { request.format.json? }
@@ -12,6 +12,7 @@ class RolesController < Backend::PreferenceController
   # GET /roles/1
   # GET /roles/1.json
   def show
+    @permissions = Permission.all
   end
 
   # GET /roles/new
@@ -21,6 +22,54 @@ class RolesController < Backend::PreferenceController
 
   # GET /roles/1/edit
   def edit
+  end
+
+  def post_permission
+
+    permissions = params[:permissions] ? params[:permissions] : []
+
+    #puts @role.permissions
+    diff_perm = []
+    current_perm = []
+
+    @role.permissions.each do |p|
+      current_perm << p.id
+      puts p.id
+    end
+
+    permissions.each do |s|
+      puts "POST: #{s}"
+    end
+
+    diff_perm = current_perm - permissions
+
+    unless diff_perm.empty?
+      diff_perm.each do |df|
+        puts "DIFF: #{df}"
+
+        permission = Permission.find(df)
+        per = @role.permissions.delete(permission)
+
+      end
+    end
+
+    unless permissions.empty?
+
+      #permissions = permissions.split(",").map { |s| s.to_i }
+
+      permissions.each do |permission_id|
+          unless @role.permissions.exists?(permission_id)
+            permission = Permission.find(permission_id)
+            #puts "TEST: #{permission.name}"
+            @role.permissions << permission
+          end
+      end
+
+    end
+
+    respond_to do |format|
+      format.json { render json: {success: true, data: permissions, id: params[:id]} } #, status: :unprocessable_entity
+    end
   end
 
   # POST /roles
@@ -71,6 +120,6 @@ class RolesController < Backend::PreferenceController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def role_params
-      params.require(:role).permit(:name, :order, :app)
+      params.require(:role).permit(:name, :order, :app, :default_page)
     end
 end

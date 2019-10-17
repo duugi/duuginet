@@ -1,19 +1,84 @@
-<p id="notice"><%= notice %></p>
+<div class="row justify-content-center">
+  <div class="col-12 col-lg-10 col-xl-8">
+    <div class="header mt-md-5">
+        <div class="header-body">
 
-<p>
-  <strong>Name:</strong>
-  <%= @role.name %>
-</p>
+          <!-- Pretitle -->
+          <h6 class="header-pretitle">
+            Order: <%= @role.order %>
+          </h6>
 
-<p>
-  <strong>Order:</strong>
-  <%= @role.order %>
-</p>
+          <!-- Title -->
+          <h1 class="header-title">
+            <%= @role.name %>
+          </h1>
 
-<p>
-  <strong>App:</strong>
-  <%= @role.app %>
-</p>
+        </div>
+      </div>
 
-<%= link_to 'Edit', edit_role_path(@role) %> |
-<%= link_to 'Back', roles_path %>
+      <div class="card">
+        <div class="card-body">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm">
+                <p>
+                  <strong>App:</strong>
+                  <%= @role.app %>
+                </p>
+
+                <%= link_to 'Edit', edit_role_path(@role) %> |
+                <%= link_to 'Back', roles_path %>
+              </div>
+              <div class="col-sm">
+                <form method="post">
+
+
+                <% @permissions.each do |permission| %>
+                <div class="form-group">
+                  <div class="form-check">
+                    <% #check_box("tag", permission.id, {checked: false}) %>
+
+                    <input type="checkbox" value="<%= permission.id %>"  name="permission_<%= permission.id %>" <%= @role.permissions.exists?(permission.id) ? "checked" : "" %> />
+                    <label class="form-check-label" for="gridCheck">
+                      <%= permission.name %>
+                    </label>
+                  </div>
+                </div>
+
+                <% end %>
+
+                <button type="button" name="save_permission" onclick="savePermission(this.form)">Save Permission</button>
+                </form>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+  </div>
+</div>
+
+<script>
+  function savePermission(frm) {
+      var values = "";
+
+      var perms = [];
+      $.each($("input[type='checkbox']:checked"), function(){
+          perms.push($(this).val());
+      });
+
+      $.ajax({
+        type: "POST",
+        url: "/roles/<%= @role.id %>/post_permission/json",
+        data: { permissions: perms },
+        success(data) {
+          console.log(data);
+          return false;
+        },
+        error(data) {
+          return false;
+        }
+      });
+  }
+</script>

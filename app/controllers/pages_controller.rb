@@ -7,6 +7,13 @@ class PagesController < ApplicationController
   # GET /posts.json
   def index
   #  @user = current_user.email
+    if user_signed_in?
+      jump_to_home()
+    end
+  end
+
+  def route_not_found
+
   end
 
   def aboutus
