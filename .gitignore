@@ -26,3 +26,6 @@
 /config/master.key
 #/config/database.yml
 /app/views/layouts/tmp
+
+# Ignore application configuration
+/config/application.yml

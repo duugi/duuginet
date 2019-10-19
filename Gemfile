@@ -27,6 +27,8 @@ gem 'searchkick'
 gem "paperclip"
 #HAML
 gem "haml-rails", "~> 2.0"
+#Simple, Heroku-friendly Rails app configuration using ENV and a single YAML file
+gem "figaro"
 #end duugi
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
