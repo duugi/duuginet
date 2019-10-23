@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  description: MyString
+  leave_allow_count: 1
+  max_ppl_absent: 1
+  max_absent_length: 1
+
+two:
+  name: MyString
+  description: MyString
+  leave_allow_count: 1
+  max_ppl_absent: 1
+  max_absent_length: 1

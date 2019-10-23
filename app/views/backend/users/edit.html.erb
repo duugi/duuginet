@@ -1,0 +1,16 @@
+<h2>Edit </h2>
+
+<%= form_for @backend_user, html: { multipart: true } do |f|  %>
+
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  </div>
+
+
+  <div class="actions">
+    <%= f.submit "Update" %>
+  </div>
+<% end %>
+
+<%= link_to "Back", :back %>

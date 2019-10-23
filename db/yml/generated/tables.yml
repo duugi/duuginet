@@ -1,0 +1,166 @@
+---
+- :name: BackendGroup
+  :action: ''
+  :subject_class: BackendGroup
+  :subject_id: ''
+  :group_name: ''
+  :actions:
+  - is_export
+  - is_import
+  - only_user
+  - only_location
+  :crud:
+  - read
+  - create
+  - update
+  - destroy
+- :name: BackendLocation
+  :action: ''
+  :subject_class: BackendLocation
+  :subject_id: ''
+  :group_name: ''
+  :actions:
+  - is_export
+  - is_import
+  - only_user
+  - only_location
+  :crud:
+  - read
+  - create
+  - update
+  - destroy
+- :name: Category
+  :action: ''
+  :subject_class: Category
+  :subject_id: ''
+  :group_name: ''
+  :actions:
+  - is_export
+  - is_import
+  - only_user
+  - only_location
+  :crud:
+  - read
+  - create
+  - update
+  - destroy
+- :name: HrmsDepartment
+  :action: ''
+  :subject_class: HrmsDepartment
+  :subject_id: ''
+  :group_name: ''
+  :actions:
+  - is_export
+  - is_import
+  - only_user
+  - only_location
+  :crud:
+  - read
+  - create
+  - update
+  - destroy
+- :name: Library
+  :action: ''
+  :subject_class: Library
+  :subject_id: ''
+  :group_name: ''
+  :actions:
+  - is_export
+  - is_import
+  - only_user
+  - only_location
+  :crud:
+  - read
+  - create
+  - update
+  - destroy
+- :name: Permission
+  :action: ''
+  :subject_class: Permission
+  :subject_id: ''
+  :group_name: ''
+  :actions:
+  - is_export
+  - is_import
+  - only_user
+  - only_location
+  :crud:
+  - read
+  - create
+  - update
+  - destroy
+- :name: Post
+  :action: ''
+  :subject_class: Post
+  :subject_id: ''
+  :group_name: ''
+  :actions:
+  - is_export
+  - is_import
+  - only_user
+  - only_location
+  :crud:
+  - read
+  - create
+  - update
+  - destroy
+- :name: Profile
+  :action: ''
+  :subject_class: Profile
+  :subject_id: ''
+  :group_name: ''
+  :actions:
+  - is_export
+  - is_import
+  - only_user
+  - only_location
+  :crud:
+  - read
+  - create
+  - update
+  - destroy
+- :name: PostComment
+  :action: ''
+  :subject_class: PostComment
+  :subject_id: ''
+  :group_name: ''
+  :actions:
+  - is_export
+  - is_import
+  - only_user
+  - only_location
+  :crud:
+  - read
+  - create
+  - update
+  - destroy
+- :name: Role
+  :action: ''
+  :subject_class: Role
+  :subject_id: ''
+  :group_name: ''
+  :actions:
+  - is_export
+  - is_import
+  - only_user
+  - only_location
+  :crud:
+  - read
+  - create
+  - update
+  - destroy
+- :name: User
+  :action: ''
+  :subject_class: User
+  :subject_id: ''
+  :group_name: ''
+  :actions:
+  - is_export
+  - is_import
+  - only_user
+  - only_location
+  :crud:
+  - read
+  - create
+  - update
+  - destroy

@@ -1,0 +1,25 @@
+
+<%= form_with url: "/backend/profile/post_update_avatar", scope: @profile, local: true do |f| %>
+
+<div class="modal-header">
+  <h2 class="modal-title" id="myModalLabel">Upload Avatar</h2>
+  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+    <span aria-hidden="true">×</span>
+  </button>
+</div>
+
+  <div class="modal-body">
+    <div class="form-row">
+
+    <%= f.file_field :avatar, class: "form-control" %>
+    </div>
+  </div>
+
+  <div class="modal-footer">
+    <div class="actions">
+      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      <%= f.submit "Upload", class: "btn btn-primary" %>
+    </div>
+  </div>
+
+<% end %>

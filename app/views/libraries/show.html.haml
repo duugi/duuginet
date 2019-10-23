@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @library.name
+%p
+  %b Slug:
+  = @library.slug
+%p
+  %b Description:
+  = @library.description
+%p
+  %b Is active:
+  = @library.is_active
+
+= link_to 'Edit', edit_library_path(@library)
+\|
+= link_to 'Back', libraries_path

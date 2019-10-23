@@ -1,0 +1,86 @@
+<!-- MODALS
+================================================== -->
+<!-- Search Modal -->
+<%= render "layouts/partials/modalSearch" %>
+<%= render "layouts/partials/modalApps" %>
+<%= render "layouts/partials/modalAdd" %>
+<%= render "layouts/partials/modalDemo" %>
+
+<nav class="navbar navbar-vertical navbar-vertical-sm fixed-left navbar-expand-md navbar-blue" id="sidebarSmall">
+    <div class="container-fluid">
+
+      <!-- Toggler -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#sidebarSmallCollapse" aria-controls="sidebarSmallCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Brand -->
+      <a class="navbar-brand" href="/">
+        <%= image_tag "logo.svg", :class => "" %>
+      </a>
+
+      <!-- Collapse -->
+      <div class="collapse navbar-collapse" id="sidebarSmallCollapse">
+        <!-- Divider -->
+        <!-- Navigation -->
+        <ul class="navbar-nav">
+          <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Modules">
+            <a class="nav-link" href="#sidebarModalApps" data-toggle="modal">
+              <i class="fe fe-grid"></i> <span class="d-md-none">Apps</span>
+            </a>
+          </li>
+          <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Add">
+            <a class="nav-link" href="#sidebarModalAdd" data-toggle="modal">
+              <i class="fe fe-plus-circle"></i> <span class="d-md-none">Add</span>
+            </a>
+          </li>
+          <!-- Icon -->
+          <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Search">
+            <a class="nav-link" href="#sidebarModalSearch" data-toggle="modal">
+              <span class="icon">
+                <i class="fe fe-search"></i>
+              </span>
+            </a>
+          </li>
+
+        </ul>
+
+        <!-- Divider -->
+
+        <!-- Push content down -->
+        <div class="mt-auto"></div>
+
+
+        <!-- Customize -->
+        <div class="mb-4" style="display:none;" data-toggle="tooltip" data-placement="right" title="" data-original-title="Customize">
+
+
+          <a href="#modalDemo" class="btn btn-block btn-primary" data-toggle="modal">
+            <i class="fe fe-sliders"></i> <span class="d-md-none ml-2">Customize</span>
+          </a>
+
+        </div>
+
+
+
+        <!-- User (md) -->
+        <div class="navbar-user d-none d-md-flex flex-column" id="sidebarSmallUser">
+
+
+          <a class="navbar-user-link mb-3" href="javascript:;"  data-toggle="tooltip" data-placement="right" title="Human Resource">
+            <i class="fe fe-clipboard"></i> <span class="d-md-none">HRMS</span>
+          </a>
+          <!-- Icon -->
+          <a href="#sidebarModalActivity" class="navbar-user-link mb-3" data-toggle="modal">
+            <span class="icon">
+              <i class="fe fe-bell"></i>
+            </span>
+          </a>
+
+          <!-- Dropup -->
+          <%= render "layouts/partials/navbarUser" %>
+        </div>
+      </div> <!-- / .navbar-collapse -->
+
+    </div>
+  </nav>

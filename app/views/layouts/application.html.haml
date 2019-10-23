@@ -1,0 +1,34 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title Duugi
+    = render "layouts/head"
+  %body
+    .d-flex.flex-column.flex-md-row.align-items-center.p-3.px-md-4.mb-3.bg-white.border-bottom.shadow-sm
+      %h5.my-0.mr-md-auto.font-weight-normal Company name
+      %nav.my-2.my-md-0.mr-md-3
+        %a.p-2.text-dark{:href => "/posts"} Posts
+        %a.p-2.text-dark{:href => "#"} Enterprise
+        %a.p-2.text-dark{:href => "#"} Support
+        %a.p-2.text-dark{:href => "#"} Pricing
+      %a.btn.btn-outline-primary{:href => "#"} Sign up
+    = render "layouts/alerts"
+    .container
+      = yield
+      %p.navbar-text.pull-right
+        - if user_signed_in?
+          Logged in as
+          = succeed "." do
+            %strong= current_user.email
+          = link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link'
+          |
+          \#{link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'}
+        - else
+          = link_to "Sign up", new_user_registration_path, :class => 'navbar-link'
+          |
+          \#{link_to "Login", new_user_session_path, :class => 'navbar-link'}
+    %footer
+      .container
+        Rails Girls #{Time.now.year}
+    = render "layouts/partials/footer"

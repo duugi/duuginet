@@ -1,0 +1,48 @@
+<div class="row justify-content-center">
+  <div class="col-12 col-lg-10 col-xl-8">
+    <div class="row" style="margin-top:20px;">
+      <div class="col-3">
+        <div class="avatar avatar-xxxl">
+          <% if current_user.profile.avatar? %>
+            <%= image_tag current_user.profile.avatar.url(:medium) %>
+          <% else %>
+          <img src="/assets/img/avatars/profiles/avatar-1.jpg" alt="..." class="avatar-img rounded">
+          <% end %>
+
+          <%= link_to 'Upload', backend_profile_avatar_path, {:remote => true, 'data-toggle' =>  "modal", 'data-target' => '#modal-window', class: 'btn btn-block btn-primary btn-sm'} %>
+        </div>
+      </div>
+      <div class="col-9">
+        <div class="card">
+          <div class="card-body">
+            <div class="mb-3">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item d-flex align-items-center justify-content-between px-0">
+                    <small>Fullname</small> <small><%= current_user.profile.fullname %></small>
+                  </li>
+                  <li class="list-group-item d-flex align-items-center justify-content-between px-0">
+                    <small>Admin</small> <i class="fe fe-check-circle text-success"></i>
+                  </li>
+                  <li class="list-group-item d-flex align-items-center justify-content-between px-0">
+                    <small>Email</small> <small><%= current_user.email %></small>
+                  </li>
+                  <li class="list-group-item d-flex align-items-center justify-content-between px-0">
+                    <small>Role</small> <small><%= current_user.role.name %></small>
+                  </li>
+                </ul>
+              </div>
+              <% #"/backend/profile/edit_general" edit_user_registration_path %>
+
+              <% unless current_user.profile %>
+                <a href="/backend/profile/create_profile" class="btn btn-primary">Create Profile</a>
+              <% else %>
+                <%= link_to 'Edit profile', backend_profile_general_path, {:remote => true, 'data-toggle' =>  "modal", 'data-target' => '#modal-window', class: 'btn btn-block btn-primary btn-sm'} %>
+
+                <%= link_to 'Edit user', edit_backend_user_path(current_user.id), {:remote => true, 'data-toggle' =>  "modal", 'data-target' => '#modal-window', class: 'btn btn-block btn-primary btn-sm'} %>
+              <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

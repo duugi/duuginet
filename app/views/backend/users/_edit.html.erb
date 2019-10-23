@@ -1,0 +1,39 @@
+<%= form_for @backend_user, local: true do |form| %>
+  <div class="modal-header">
+    <h2 class="modal-title" id="myModalLabel">Edit Profile</h2>
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+      <span aria-hidden="true">×</span>
+    </button>
+  </div>
+
+  <div class="modal-body">
+    <div class="form-row">
+      <div class="col-12 col-md-6 mb-3">
+        <label>Date format</label>
+        <%= form.text_field :date_format, class: 'form-control' %>
+      </div>
+      <div class="col-12 col-md-6 mb-3">
+        <label>Time zone</label>
+        <%= form.text_field :time_zone, class: 'form-control' %>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="col-12 col-md-6 mb-3">
+        <label><%= form.label :language %></label>
+        <%= form.select(:language, User.languages.keys, {}, { :class => 'form-control' }) %>
+      </div>
+      <div class="col-12 col-md-6 mb-3">
+      </div>
+    </div>
+
+  </div>
+
+
+    <div class="modal-footer">
+      <div class="actions">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <%= form.submit "Update", class: "btn btn-primary" %>
+      </div>
+    </div>
+  <% end %>

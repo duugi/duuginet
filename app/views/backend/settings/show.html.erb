@@ -1,0 +1,40 @@
+<div class="row justify-content-center">
+
+<div class="col-12 col-lg-10 col-xl-8">
+
+<div class="card">
+
+<div class="card-body">
+
+
+
+<%= form_for(Setting.new, url: backend_settings_path) do |f| %>
+  <div class="form-group">
+    <label class="control-label">Host</label>
+    <%= f.text_field :host, value: Setting.host, class: "form-control", placeholder: "http://localhost"  %>
+  </div>
+
+  <div class="form-group form-checkbox">
+    <label>
+      <%= f.check_box :captcha_enable, checked: Setting.captcha_enable? %>
+      Enable/Disable Captcha
+    </label>
+  </div>
+
+  <div class="form-group">
+    <label class="control-label">Admin Emails</label>
+    <%= f.text_area :admin_emails, value: Setting.admin_emails.join("\n"), class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <label class="control-label">Notification options</label>
+    <%= f.text_area :notification_options, value: YAML.dump(Setting.notification_options), class: "form-control", style: "height: 180px;"  %>
+    <div class="form-text">
+      Use YAML format to config the SMTP_html
+    </div>
+  </div>
+<% end %>
+</div>
+</div>
+</div>
+</div>

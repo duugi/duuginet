@@ -1,0 +1,180 @@
+body {
+  font-family: Roboto,sans-serif;
+  background-color: #fff;
+}
+
+.wrapper {
+    height: 100%;
+    overflow: hidden;
+    width: 100%;
+}
+
+.left-side-menu {
+  height: 100%;
+  transition: all .2s ease-out;
+  top: 0;
+  bottom: 0;
+  width: 240px;
+  font-size: 14px;
+  padding: .75rem 1rem;
+
+  display: flex !important;
+  flex-direction: column;
+
+}
+
+.left-side-menu .sidebar-content {
+    //max-height: 100%;
+}
+
+.left-side-menu .atl-navbar-nav {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+
+.modal-dialog-vertical .navbar-brand{
+  margin: 0px;
+  padding: 0px;
+  padding-top: 20px;
+  padding-bottom: 1.20313rem;
+  display: block;
+  text-align: center;
+  > .img_preview {
+    pointer-events: none;
+    vertical-align: bottom;
+    overflow: hidden;
+    filter: brightness(0.7);
+  }
+}
+
+.search-box {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  overflow: hidden;
+}
+
+.search-model-left {
+    -webkit-box-align: center;
+    align-items: center;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 64px;
+    flex: 1 0 auto;
+
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    padding-bottom: calc(20px);
+    height: calc(100vh - 0px);
+    background: #fff;
+    transition: background-color 0.3s cubic-bezier(0.2, 0, 0, 1) 0s, color 0.3s cubic-bezier(0.2, 0, 0, 1) 0s;
+}
+
+.search-model-right {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  width: 100%;
+  padding: 0px;
+  height: 100%;
+}
+
+
+.card-header {
+	margin-bottom: 0;
+	background-color: transparent;
+	border-bottom: 1px solid #edf2f9
+}
+
+.card-subheader {
+    min-height: 2rem;
+    padding: 0.2rem 1rem;
+    border-bottom: 1px solid #edf2f9;
+}
+
+.table-sm td, .table-sm th {
+    padding: .4rem;
+}
+
+// Hover effect
+//
+// Placed here since it has to come after the potential zebra striping
+//$table-hover-color: "#ddd";
+//$table-hover-bg: "#eeffff";
+.table-hover {
+  tbody tr:hover {
+    background-color: #EBF4FD;
+    border-top-color: #cce6fa;
+    border-bottom-color: #cce6fa;
+  }
+}
+
+
+.sidebar-sticky {
+    position: relative;
+    top: 0;
+    height: 100vh;
+    padding-top: .5rem;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.secondary-action-menu {
+
+    list-style-type: none;
+    display: block;
+    padding: 0;
+    list-style-type: none;
+    width: 100%;
+    margin: 0;
+}
+
+.secondary-action-menu li:first {
+  padding-top: 20px;
+}
+
+.secondary-action-menu li i {
+  margin-right: 10px;
+}
+
+.secondary-action-menu .link {
+  font-weight: 400;
+    line-height: 22px;
+    font-size: 14px;
+    padding: 5px 0;
+}
+
+.grid-search-body {
+  padding: 12px;
+}
+
+.header-tables {
+  padding: 10px 0;
+  .title {
+    font-size: 18px;
+    line-height: 18px;
+    letter-spacing: -0.02em;
+    height: 100%;
+    padding: 10px 0;
+  }
+
+}
+
+.bg-fixed-bottom {
+  background-size: calc(100% - 250px);
+}
+
+.empty-table {
+    width: 100%;
+    height: 100%;
+    max-width: 420px;
+    padding: 15px;
+    margin: auto;
+}

@@ -1,0 +1,42 @@
+<%= form_with(model: hrms_department, local: true) do |form| %>
+  <% if hrms_department.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(hrms_department.errors.count, "error") %> prohibited this hrms_department from being saved:</h2>
+
+      <ul>
+      <% hrms_department.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_field :description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :leave_allow_count %>
+    <%= form.number_field :leave_allow_count %>
+  </div>
+
+  <div class="field">
+    <%= form.label :max_ppl_absent %>
+    <%= form.number_field :max_ppl_absent %>
+  </div>
+
+  <div class="field">
+    <%= form.label :max_absent_length %>
+    <%= form.number_field :max_absent_length %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

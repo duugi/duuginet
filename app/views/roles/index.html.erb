@@ -1,0 +1,83 @@
+  <div class="row d-flex">
+
+    <main class="flex-grow-1">
+
+      <div class="header-tables">
+        <div class="row">
+          <div class="col-12 col-sm-6 col-md-9">
+            <div class="title">Roles</div>
+          </div>
+          <div class="col-6 col-md-3">
+            <form>
+                <div class="input-group input-group-flush input-group-merge">
+                  <input type="search" class="form-control form-control-prepended search" placeholder="Search">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text">
+                      <span class="fe fe-search"></span>
+                    </div>
+                  </div>
+                </div>
+              </form>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="content">
+
+        <table class="table table-sm">
+          <thead>
+            <tr>
+              <th width="10%">Name</th>
+              <th>Order</th>
+              <th width="10%">App</th>
+              <th width="10%">default page</th>
+              <th colspan="3"></th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <% @roles.each do |role| %>
+              <tr>
+                <td><%= role.name %></td>
+                <td><%= role.order %></td>
+                <td><%= role.app %></td>
+                <td><%= role.default_page %></td>
+                <td><%= link_to 'Show', role %></td>
+                <td><%= link_to 'Edit', edit_role_path(role) %></td>
+                <td><%= link_to 'Destroy', role, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+
+      <br>
+    </main>
+
+    <div class="sidebar bg-transparent">
+      <div class="sidebar-sticky">
+        <div class="grid-search-body">
+
+            <%= link_to 'New Role', new_role_path, class: "btn btn-block btn-primary btn-sm" %>
+
+            <br />
+            <ul class="secondary-action-menu">
+                <li class="mc-tertiary-list-element">
+                    <a href="#" class="link"><i class="fe fe-download-cloud"></i> Import</a>
+                </li>
+                <li class="mc-tertiary-list-element">
+                    <a href="#" class="link"><i class="fe fe-folder"></i> Export</a>
+                </li>
+                <li class="mc-tertiary-list-element">
+                    <a href="#" class="link"><i class="fe fe-watch"></i> Add permissions</a>
+                </li>
+                <li class="mc-tertiary-list-element">
+                    <a href="#" class="link"><i class="fe fe-trash"></i> Show deleted data</a>
+                </li>
+            </ul>
+
+        </div>
+      </div>
+    </div>
+  </div>

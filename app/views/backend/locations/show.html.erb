@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @backend_location.name %>
+</p>
+
+<p>
+  <strong>Country code:</strong>
+  <%= @backend_location.country_code %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @backend_location.description %>
+</p>
+
+<p>
+  <strong>State code:</strong>
+  <%= @backend_location.state_code %>
+</p>
+
+<p>
+  <strong>Timezone code:</strong>
+  <%= @backend_location.timezone_code %>
+</p>
+
+<p>
+  <strong>Is active:</strong>
+  <%= @backend_location.is_active %>
+</p>
+
+<%= link_to 'Edit', edit_backend_location_path(@backend_location) %> |
+<%= link_to 'Back', backend_locations_path %>

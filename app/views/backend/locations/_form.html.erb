@@ -1,0 +1,47 @@
+<%= form_with(model: backend_location, local: true) do |form| %>
+  <% if backend_location.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(backend_location.errors.count, "error") %> prohibited this backend_location from being saved:</h2>
+
+      <ul>
+      <% backend_location.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :country_code %>
+    <%= form.text_field :country_code %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_field :description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :state_code %>
+    <%= form.text_field :state_code %>
+  </div>
+
+  <div class="field">
+    <%= form.label :timezone_code %>
+    <%= form.text_field :timezone_code %>
+  </div>
+
+  <div class="field">
+    <%= form.label :is_active %>
+    <%= form.check_box :is_active %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

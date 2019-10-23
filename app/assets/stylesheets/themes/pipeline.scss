@@ -1,0 +1,37 @@
+//
+//
+// layouts.scss
+//
+//
+
+.layout-sidebar .main-container {
+  margin-left: 66px;
+  display: flex;
+  flex-direction: row-reverse;
+  height: calc(100vh);
+  overflow: hidden;
+}
+
+.layout-sidebar .main-container .content-container {
+    height: 100%;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    flex: 1;
+}
+
+.layout-sidebar .sidebar {
+    height: 100%;
+    overflow: hidden;
+    border-right: 1px solid #dee2e6;
+    display: flex !important;
+    flex-direction: column;
+    background: #fff;
+    width: 240px;
+}
+
+.layout-sidebar .sidebar .sidebar-content {
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
