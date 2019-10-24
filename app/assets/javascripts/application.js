@@ -17,4 +17,7 @@
 //= require popper
 //= require bootstrap
 //= require datatables
+//= require demo.datatables
+//= require jquery.mousewheel
 //= require_tree .
+//= require duugi
