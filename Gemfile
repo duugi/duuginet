@@ -29,6 +29,9 @@ gem "paperclip"
 gem "haml-rails", "~> 2.0"
 #Simple, Heroku-friendly Rails app configuration using ENV and a single YAML file
 gem "figaro"
+#small filter
+gem 'filterrific'
+gem 'nested_scaffold'
 #end duugi
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

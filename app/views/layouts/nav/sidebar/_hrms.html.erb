@@ -5,10 +5,7 @@
         <div class="sc-cpmLhU krwbFu"><div class="sc-kasBVs hGzWqW">HRMS</div></div>
         <!-- Collapse -->
         <div class="">
-
           <!-- Navigation -->
-
-
           <ul class="atl-navbar-nav">
             <li>
               <a class="atl-nav-link <%= controller.controller_name == "hrms" ? "active" : "" %>" href="/dashboard/hrms">
@@ -32,6 +29,11 @@
                     <li>
                       <a class="dropdown-item " href="kanban.html">
                         Department
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item <%= controller.controller_name == "positions" ? "active" : "" %>" href="/hrms/positions">
+                        Positions
                       </a>
                     </li>
                     <li>

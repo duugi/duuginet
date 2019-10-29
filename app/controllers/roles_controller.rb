@@ -6,7 +6,9 @@ class RolesController < Backend::PreferenceController
   # GET /roles
   # GET /roles.json
   def index
-    @roles = Role.all
+    #@roles = Role.filter(params.slice(:name))
+    @roles = Role.all()
+
   end
 
   # GET /roles/1
@@ -121,5 +123,9 @@ class RolesController < Backend::PreferenceController
     # Never trust parameters from the scary internet, only allow the white list through.
     def role_params
       params.require(:role).permit(:name, :order, :app, :default_page)
+    end
+
+    def filtering_params(params)
+      params.slice(:name)
     end
 end

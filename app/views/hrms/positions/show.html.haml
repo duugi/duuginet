@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @hrms_position.name
+%p
+  %b Description:
+  = @hrms_position.description
+
+= link_to 'Edit', edit_hrms_position_path(@hrms_position)
+\|
+= link_to 'Back', hrms_positions_path

@@ -1,0 +1,54 @@
+.row.justify-content-center{:style => "margin-top:10px;"}
+  .col-12.col-lg-10.col-xl-8
+    %p#notice= notice
+    #hrms_positions.card
+      .card-header
+        / Title
+        .row.align-items-center
+          .col
+            / Title
+            %h4.card-header-title
+              Positions
+          .col-auto
+            .input-group.input-group-sm.input-group-merge
+              %input.form-control.form-control-prepended.search{:placeholder => "Search", :type => "text"}/
+              .input-group-prepend
+                .input-group-text
+                  %span.fe.fe-search
+          .col-auto
+            / Button
+            = link_to 'New Position', new_hrms_position_path, class: "btn btn-sm btn-white"
+      - if @hrms_positions.size > 0
+        .table-responsive.mb-0
+          %table.table.table-sm.table-nowrap.card-table
+            %thead
+              %tr
+                %th Name
+                %th Description
+                %th Department
+                %th
+                %th
+                %th
+
+            %tbody.list
+              - @hrms_positions.each do |hrms_position|
+                %tr
+                  %td= hrms_position.name
+                  %td= hrms_position.description
+                  %td= hrms_position.department.name
+                  %td= link_to 'Show', hrms_position
+                  %td= link_to 'Edit', edit_hrms_position_path(hrms_position)
+                  %td= link_to 'Destroy', hrms_position, method: :delete, data: { confirm: 'Are you sure?' }
+      - else
+        .card.card-inactive{:style => "margin-bottom: 0px;"}
+          .card-body.text-center
+            / Image
+            %img.img-fluid{:alt => "...", :src => "/assets/img/illustrations/scale.svg", :style => "max-width: 182px;"}/
+            / Title
+            %h1
+              No Positions
+            / Subtitle
+            %p.text-muted
+              Create a first location
+            / Button
+            = link_to 'New Position', new_hrms_position_path, class: "btn btn-primary"

@@ -1,6 +1,9 @@
 
 
 Rails.application.routes.draw do
+  namespace :hrms do
+    resources :positions
+  end
   resources :libraries
   resources :categories
   resources :permissions
